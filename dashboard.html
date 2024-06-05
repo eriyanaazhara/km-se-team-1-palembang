@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM 1 | Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigasi -->
+    <div class="bg-img-db">
+        <nav class="navbar">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="dashboard.html" class="nav-button">Dashboard</a>
+            <a href="about_us.html" class="nav-button">About Us</a>
+        </nav>
+    <!-- Navigasi -->
+
+    <!-- Konten -->
+        <main class="main">
+            <section id="dashboard">
+
+                <header class="head-2">
+                    <h2 class="title">Vending Machine Sales Analysis</h2>
+                </header>
+
+                <!-- Filter -->
+                <div class="filter-container" >
+                    <!-- Filter Lokasi-->
+                    <label>Location:</label>
+                    <select id="locationFilter" class="filter-location">
+                        <option value="">All Locations</option>
+                        <option value="Location 1">Location 1</option>
+                        <option value="Location 2">Location 2</option>
+                    </select>
+
+                    <!-- Filter Tanggal-->
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate">
+                    <button id="filterButton">Filter</button>
+                </div>
+                
+                <article>
+                    <div class="grid-container">
+                        <!-- Score card -->
+                        <div class="grid-item-sc">Total Income:<span id="totalIncome"></span></div>
+                        <div class="grid-item-sc">Products:<span id="totalProducts"></span></div>
+                        <div class="grid-item-sc">Products Sold:<span id="totalProductsSold"></span></div>
+                        <div class="grid-item-sc">Total Machine:<span id="totalLocations"></span></div>
+
+                        <!-- Chart -->
+                        <div class="grid-item">
+                            <a href="page/type_of_payment.html">
+                                <canvas id="typeOfPaymentChart" width="400" height="300"></canvas>
+                            </a>
+                        </div>                    
+                        <div class="grid-item">
+                            <a href="page/revenue_per_month.html">
+                                <canvas id="revenuePerMonthChart" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="page/product_sold_per_category.html">
+                                <canvas id="productSoldPerCategoryChart" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="page/total_transactions_on_machine.html">
+                                <canvas id="totalTransactionsOnMachineChart" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="page/sales_per_unit.html">
+                                <canvas id="salesPerUnitChart" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="page/average_order_value.html">
+                                <canvas id="averageOrderValueChart" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="page/least_popular_product.html">
+                                <canvas id="leastPopularProduct" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="page/most_popular_product.html">
+                                <canvas id="mostPopularProduct" width="400" height="300"></canvas>
+                            </a>
+                        </div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="foot">
+            <p>&copy; 2024 Team 1 - Section Palembang</p>
+        </footer>
+    </div>
+    <!-- Konten -->
+    
+    
+    <script src="assets/js/chart.js"></script>
+</body>
+</html>
